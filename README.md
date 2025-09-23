@@ -4,6 +4,9 @@ ScoreTrace v0.1.0
 
 ====================
 
+**NOTICE: Some antivirus tools or browsers may flag ScoreTrace.exe as suspicious due to its self-contained packaging. We assure you this is a clean build compiled from self written code with no malicious intent. If blocked, you may need to unblock or whitelist the file manually. In the future we will apply for certification or develop an official installer to avoid false warnings.**
+
+
 What is ScoreTrace?
 
 ScoreTrace is a lightweight Windows application that connects to scoreboard controllers and generates real-time XML data for broadcast overlays, dashboards, and live sports analytics. Designed for simplicity and reliability, ScoreTrace helps communities integrate live score data into their productions with zero technical overhead.
