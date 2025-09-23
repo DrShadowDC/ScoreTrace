@@ -26,7 +26,9 @@ If more than one COM Port is available, you may disconnect the scoreboard contro
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Folder Structure - ScoreTrace can be stored in any folder, on your PC or on an external storage such as a USB, ready for plug and play
+Folder Structure
+
+ScoreTrace can be stored in any folder, on your PC or on an external storage such as a USB, ready for plug and play
 - `ScoreTrace.exe` — the main launcher
 - `Output/` — XML file is written here as `ScoreTrace Output.xml` and will be created adjacent to the .exe file
 
@@ -40,9 +42,7 @@ Troubleshooting
 
 Credits 
 
-Created by AJ Fairchild
-
-On behalf of Tinora Rams Live and is being developed for community use.
+Created by AJ Fairchild on behalf of Tinora Rams Live and is being developed for community use.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
