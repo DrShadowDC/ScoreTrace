@@ -1,6 +1,6 @@
 ====================
 
-ScoreTrace v0.2.0
+ScoreTrace v0.4.0
 
 ====================
 
@@ -59,15 +59,15 @@ While testing ScoreTrace, feel free to leave feedback on our Discord
 
 🛠 Change Log
 
-- Fixed an issue where starting and stopping the game clock would interrupt the data feed, causing a timeout exception
-- Fixed a problem in which the data was not parsing fully when the Daktronics AllSport sent a full packet. The full "synchronizing" packet gets sent any time the game clock is stopped. This means that many fields may be blank until the first time the clock is stopped. This is not an issue with ScoreTrace, it is how the AllSport sends its information.
-- Fixed "Ball On" variable had the incorrect index location and was returning a blank value.
-- Changed: "Daktronics AllSport" is now the default tracer when opening ScoreTrace 
+- fixed an issue where if the app was opened without any COM ports being detected, it would fail to open. It will now give a warning stating no COM ports are available and give a "DEBUG" option in the drop down menu.
+- added advanced Distance logic to determine if it is "& Goal". This exposes an additional output variable `FormattedDistance` that can be used instead of the standard `Distance`. This builds the Down and Distance (i.e. "1st & Goal" or "2nd & 9") together into a single value, only requiring one textbox in your streaming software.
+- Scaling of the UI was fixed. Some computers squeeze the UI objects together, overlapping them, or enlarged them to where the UI was too big for the screen. This should be improved but may need more testing on more devices.
+- Default tracer has been changed back to Debug as it allows for easier testing
+- code optimizations 
 
 --------------------------
 
 🚀 Upcoming changes
 
-- Update will be coming in which the "Ball On" value gets a bit smarter. It currently only gives a yard line that is ambiguous to which side of the field its on. Daktronics outputs a 'full' variable in its packet that specifies which team has the ball, which direction they are going, and which side of the field they are on. For example, HRR35 indicated H=Home, R=Going right, R=on right side of the field, 35=current yard line. This will allow for more advanced parsing. The hope is to use these values to determine 1st/2nd and GOAL type situations automatically.
-
 - Adding support for Hot-Plugging so that if you connect a scoreboard device after opening ScoreTrace, it will refresh the list live without needing to be restarted
+- Play clock feature (started implementing this but it was showing incorrect data occasionally, more testing is needed)
