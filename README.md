@@ -26,7 +26,7 @@ It can be launched on a laptop with direct connection to the AllSport 5000.
 5. Check the status of ScoreTrace by using http://localhost:5000 or add a path to the end of this link for more details (see paths below)
 
 Running it Remotely
-Please see Raspberry Pi Setup Instructions for steps on how to build your own raspberry pi device for ScoreTrace.
+Please see the txt file called "Raspberry Pi Setup.txt" for steps on how to build your own raspberry pi device for ScoreTrace.
 It can also be hosted on a Raspberry Pi devices such as a Raspberry Pi Zero for minimal footprint. Steps below assume you already have a Pi setup with ScoreTrace
 1. plug the Pi in to the AllSport via a serial data cable and power it on
 2. open ScoreTrace_RemotePi.exe on any windows laptop connected to the same network as the pi
@@ -47,7 +47,7 @@ Most testing has been done with vMix using titles designed in GT Title designer 
 
 🛠 Selecting COM Port
 
-On the Local exe version, you are asked which COM port to use, if you are unsure you can unplug the AllSport and use the refresh ports button to see which number disappears. Reconnect the AllSport and the number port that reappears upon refresh, is the correct one.
+On the Local exe version, you are asked which COM port to use, if you are unsure, you can unplug the AllSport and use the refresh ports button to see which number disappears. Reconnect the AllSport and the number port that reappears upon refresh, is the correct one.
 
 the Remote version *should* always use the same COM port. If there is any issues with the incorrect port being used on the Pi, you will need to access the Pi and determine the correct port to use and change the code in the ScoreTrace.py file on the Pi as it is defaults to "/dev/ttyUSB0". This change is made on line 12 of the code.
 
@@ -65,7 +65,7 @@ More paths may be added in the future for more functionality.
 
 🛠 Troubleshooting
 
-- If the data does not read properly, make sure you have a cord that is capable of passing serial data using an RS-232 serial cord with FTDI chipset. This is not a printer cable and an example cord that has been tested can be found at https://www.amazon.com/dp/B08ZK78LHC?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1. Using a cord that is a non-RS232 or non-FTDI cable may result in dropped packets, no data, or unstable COM ports.
+- If the data does not read properly, make sure you have a cord that is capable of passing serial data using an RS-232 serial cord with FTDI chipset. This is not a printer cable and example cord that has been tested can be found at https://www.amazon.com/dp/B08ZK78LHC?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1. Using a cord that is a non-RS232 or non-FTDI cable may result in dropped packets, no data, or unstable COM ports.
 - If ScoreTrace is confirmed working on one device but data is not being read on a remote device, ensure they are connected to the same network, this is especially important when using RemotePi.exe as it will tell you no Pi found if not on the same network.
 - If the Daktronics Scoreboard is disrupted for any reason and the connection to ScoreTrace breaks (particularly using it remotely on a Raspberry Pi. A simple restart of the Pi can correct the issue. This has only happened once during testing and has not been replicated so troubleshooting is limited at this point, though it was able to be corrected within 60 seconds or so.
 
