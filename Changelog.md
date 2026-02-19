@@ -1,6 +1,6 @@
 ====================
 
-ScoreTrace v1.1.0
+ScoreTrace 1.2.0
 
 ====================
 
@@ -13,11 +13,16 @@ ScoreTrace has been completely reworked into a lightweight, multi-platform appli
 
 --------------------------
 
-🛠 Changlog for version 1.1.0
+🛠 **Changlog for version 1.2.0**
 
-- added home and away roster data points for basketball. These include the player's number, foul count, and points to be used with stats graphics. They match the data points that are often seen on the edge of scoreboards that show the current players on the courts fouls and points. Even players that arent actively on the court and represented on the scoreboard are stored internally in the AllSport 5000 and can now be accessed.
-- Changed the webhost to show the correct version number instead of the previous error in which it showed v2.0.
-- Removed the "shutdown scoretrace" button from the Local launcher as it previously only wrote text to the window and didn't actually shut down scoretrace. This was a useless button anyways due to closing the app terminates the process anyways.
+- added baseball/softball support. There are many data points that can be pulled from the AllSport 5000 for baseball and softball. The biggest limiting factor here will be how many of the features the scoreboard operator uses as I'm sure most keep very basic stats. Data points include but are not limited to: inning, balls, strikes, outs, total score, individual inning score (box score), errors, hits, etc. More data points may be added in the future but only upon request.
+- made some fairly significant improvements to the code the reduced the overall complexity of the programming. This will make implementing new features much easier in the future.
+- added a 'Copy URL' button that allows user to quickly copy and paste into their streaming software. Simply click the button and paste into the File/URL option of vMix or other scorebug software. If running the local exe on a remote laptop, you will still need to know the IP address of the laptop and enter the URL manually.
+- added an alternating possession indicator for basketball. This shows as either a blank value or ">". Easiest setup for this point is to use a script to detect if its off (blank) or on (">") and allow the script to change the scorebug appearance.
+
+
+**Known Issues**
+- there is a potential issue with the football data point tied to 'Ball On' as it currently gives the same output as the 'To Go' data point. I am currently trying to find the source of this error but am unsure if it is an AllSport issue or ScoreTrace issue. Ideally this data point gives a bit more information that can be parsed in a way that the code can tell if its first and goal or simply first and 10.
 
 --------------------------
 
