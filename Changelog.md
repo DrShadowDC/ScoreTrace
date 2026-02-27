@@ -15,10 +15,7 @@ ScoreTrace has been completely reworked into a lightweight, multi-platform appli
 
 🛠 **Changlog for version 1.2.0**
 
-- added baseball/softball support. There are many data points that can be pulled from the AllSport 5000 for baseball and softball. The biggest limiting factor here will be how many of the features the scoreboard operator uses as I'm sure most keep very basic stats. Data points include but are not limited to: inning, balls, strikes, outs, total score, individual inning score (box score), errors, hits, etc. More data points may be added in the future but only upon request.
-- made some fairly significant improvements to the code the reduced the overall complexity of the programming. This will make implementing new features much easier in the future.
-- added a 'Copy URL' button that allows user to quickly copy and paste into their streaming software. Simply click the button and paste into the File/URL option of vMix or other scorebug software. If running the local exe on a remote laptop, you will still need to know the IP address of the laptop and enter the URL manually.
-- added an alternating possession indicator for basketball. This shows as either a blank value or ">". Easiest setup for this point is to use a script to detect if its off (blank) or on (">") and allow the script to change the scorebug appearance.
+- added soccer support which includes data points such as clock, home/away scores, fouls, penalty kicks, corner kicks and more.
 
 
 **Known Issues**
