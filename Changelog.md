@@ -1,22 +1,39 @@
-====================
+🛠 **Changlog for version 1.5.0**
 
-ScoreTrace 1.3.0
-
-====================
-
-**NOTICE: Some antivirus tools or browsers may flag ScoreTrace.exe as suspicious due to its self-contained packaging. We assure you this is a clean build compiled from self written code with no malicious intent. If blocked, you may need to unblock or whitelist the file manually. In the future we will apply for certification or develop an official installer to avoid false warnings.**
-
-
-📊 What is ScoreTrace?
-
-ScoreTrace has been completely reworked into a lightweight, multi-platform application that can parse data from a Daktronics AllSport 5000. Previous versions, while they worked well, required a direct link to the AllSport. With the redesign, ScoreTrace can now be deployed on a Raspberry Pi and accessed remotely via the local network as all output data from ScoreTrace is hosted in a json formatted WebAPI rather than an actual json file. We hope the time that has been spent on rebuilding this program pays off for those that use it.
-
---------------------------
-
-🛠 **Changlog for version 1.2.0**
-
-- added soccer support which includes data points such as clock, home/away scores, fouls, penalty kicks, corner kicks and more.
-
+- added *volleyball* support which includes the following data points
+```
+- Home Score
+- AwayScore
+- Game/Set
+- Home Games/Sets Won
+- Away Games/Sets Won
+- Home Score Game 1
+- Home Score Game 2
+- Home Score Game 3
+- Home Score Game 4
+- Home Score Game 5
+- Home Score Game 6
+- Home Score Game 7
+- Home Score Game 8
+- Home Score Game 9
+- Away Score Game 1
+- Away Score Game 2
+- Away Score Game 3
+- Away Score Game 4
+- Away Score Game 5
+- Away Score Game 6
+- Away Score Game 7
+- Away Score Game 8
+- Away Score Game 9
+- Home Aces
+- Home Kills
+- Home Blocks
+- Home Digs
+- Away Aces
+- Away Kills
+- Away Blocks
+- Away Digs
+```
 
 **Known Issues**
 - there is a potential issue with the football data point tied to 'Ball On' as it currently gives the same output as the 'To Go' data point. I am currently trying to find the source of this error but am unsure if it is an AllSport issue or ScoreTrace issue. Ideally this data point gives a bit more information that can be parsed in a way that the code can tell if its first and goal or simply first and 10.
